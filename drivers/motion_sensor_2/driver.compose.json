@@ -1,7 +1,7 @@
 {
-    "id": "motion_sensor_2",
+    "id": "SJO_motion_lux",
     "name": {
-      "en": "Motion Sensor"
+      "en": "SJO_motion_lux"
     },
     "class": "sensor",
     "platforms": ["local"],

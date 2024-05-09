@@ -21,20 +21,30 @@
       "Ejlink",
       "Lidl",
       "Livarno",
+      "Ejlink",
+      "Lidl",
+      "Livarno",
       "Lonsonho",
+      "Malmbergs",
+      "Moes",
       "Malmbergs",
       "Moes",
       "Nedis",
       "Neo",
       "Samotech",
+      "Samotech",
       "Silvercrest",
+      "Smart9",
+      "Zemismart",
       "Smart9",
       "Zemismart",
       "Zigbee",
       "Woox",
+      "Woox",
       "Sensor",
       "Temperature",
       "Humidity",
+      "Motion",
       "Motion",
       "Door",
       "Window",
@@ -45,12 +55,17 @@
       "Water",
       "Smoke",
       "CO",
+      "Smoke",
+      "CO",
       "Gas",
       "LED",
       "Light",
       "RGB",
       "Christmas",
       "Socket",
+      "Dimmer",
+      "Blind",
+      "Shutter",
       "Dimmer",
       "Blind",
       "Shutter",
@@ -657,9 +672,13 @@
           "_TZ3210_weaqkhab",
           "_TZ3210_k1msuvg6",
           "_TZ3000_mgusv51k"
+          "_TZ3210_k1msuvg6",
+          "_TZ3000_mgusv51k"
         ],
         "productId": [
           "TS110F",
+          "TS110E",
+          "TS0052"
           "TS110E",
           "TS0052"
         ],
@@ -741,6 +760,10 @@
           "_TZ3000_4ugnzsli",
           "TUYATEC-7qunn4gq",
           "_TZ3000_decxrtwa",
+          "_TZ3000_yxqnffam",
+          "_TZ3000_9eeavbk5",
+          "_TZ3000_yxqnffam",
+          "_TZ3000_a33rw7ou"
           "_TZ3000_yxqnffam",
           "_TZ3000_9eeavbk5",
           "_TZ3000_yxqnffam",
@@ -863,6 +886,8 @@
       },
       "zigbee": {
         "manufacturerName": [
+          "_TZ3000_zgrffiwg",
+          "_TZ3000_bpkijo14"
           "_TZ3000_zgrffiwg",
           "_TZ3000_bpkijo14"
         ],
@@ -1054,6 +1079,7 @@
             ],
             "bindings": [
               1,
+              1024,
               1280
             ]
           }
@@ -1181,6 +1207,8 @@
           "TUYATEC-53o41joc",
           "TUYATEC-deetibst",
           "TUYATEC-dgtxmihe",
+          "TUYATEC-b5g40alm",
+          "TUYATEC-dxnohkpd"
           "TUYATEC-b5g40alm",
           "TUYATEC-dxnohkpd"
         ],
@@ -1347,79 +1375,19 @@
             "en": "seconds",
             "nl": "seconden"
           }
-        }
-      ]
-    },
-    {
-      "id": "radar_sensor_2",
-      "name": {
-        "en": "Radar Sensor ZG-205Z/W",
-        "nl": "Radar Sensor ZG-205Z/W"
-      },
-      "class": "sensor",
-      "platforms": [
-        "local"
-      ],
-      "connectivity": [
-        "zigbee"
-      ],
-      "capabilities": [
-        "measure_luminance",
-        "alarm_motion",
-        "alarm_small_presence",
-        "alarm_large_presence",
-        "alarm_breathe_presence"
-      ],
-      "images": {
-        "large": "/drivers/radar_sensor_2/assets/images/large.png",
-        "small": "/drivers/radar_sensor_2/assets/images/small.png"
-      },
-      "energy": {
-        "approximation": {
-          "usageConstant": 2.5
-        }
-      },
-      "zigbee": {
-        "manufacturerName": [
-          "_TZE200_2aaelwxk"
-        ],
-        "productId": [
-          "TS0225"
-        ],
-        "endpoints": {
-          "1": {
-            "clusters": [
-              0,
-              3,
-              1280,
-              57346,
-              61184,
-              60928,
-              57344,
-              1024
-            ],
-            "bindings": [
-              258,
-              61148
-            ]
-          }
         },
-        "learnmode": {
-          "image": "/drivers/radar_sensor_2/assets/icon.svg",
-          "instruction": {
-            "en": "Press and hold the reset button for 6 seconds. When the indicator light flashes it is in pairing mode.",
-            "nl": "Druk 6 seconden op de reset knop. Wacht tot de led gaat knipperen."
-          }
-        }
-      },
-      "settings": [
         {
-          "id": "motion_detection_sensitivity",
+          "id": "distance_update_interval",
           "type": "number",
           "label": {
             "en": "Distance update interval",
             "nl": "Afstand update interval"
+            "en": "Distance update interval",
+            "nl": "Afstand update interval"
           },
+          "value": 10,
+          "min": 3,
+          "max": 60,
           "value": 10,
           "min": 3,
           "max": 60,
@@ -2055,7 +2023,9 @@
           "_TZ3000_5ity3zyu",
           "_TZ3000_okaz9tjs",
           "_TZ3000_eyzb8yg3",
-          "_TZ3000_dksbtrzs"
+          "_TZ3000_dksbtrzs",
+          "_TZ3000_nkcobies",
+          "_TZ3000_j1v25l17"
         ],
         "productId": [
           "TS0121",
@@ -2539,6 +2509,66 @@
           }
         }
       }
+    },
+    {
+      "id": "smoke_sensor2",
+      "name": {
+        "en": "Smoke Sensor"
+      },
+      "class": "sensor",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "capabilities": [
+        "measure_battery",
+        "alarm_smoke",
+        "alarm_tamper",
+        "alarm_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA"
+        ]
+      },
+      "images": {
+        "large": "/drivers/smoke_sensor2/assets/images/large.png",
+        "small": "/drivers/smoke_sensor2/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "_TZE200_ntcy3xu1",
+          "_TZE200_m9skfctm"
+        ],
+        "productId": [
+          "TS0601"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              4,
+              5,
+              61184
+            ],
+            "bindings": [
+              4,
+              5,
+              61184
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/smoke_sensor2/assets/icon.svg",
+          "instruction": {
+            "en": "Press the RESET pinhole on the side of the unit for 5 seconds until LED blinks."
+          }
+        }
+      },
+      "settings": []
     },
     {
       "id": "smoke_sensor2",
@@ -3319,7 +3349,8 @@
           "_TZ3000_jl7qyupf",
           "_TZ3000_7ed9cqgi",
           "_TZ3000_18ejxno0",
-          "_TZ3000_llfaquvp"
+          "_TZ3000_llfaquvp",
+          "_TZ3000_lmlsduws"
         ],
         "productId": [
           "TS0003",
@@ -3441,7 +3472,7 @@
         },
         "devices": {
           "secondSwitch": {
-            "class": "light",
+            "class": "socket",
             "capabilities": [
               "onoff"
             ],
@@ -3572,7 +3603,8 @@
       },
       "zigbee": {
         "manufacturerName": [
-          "_TZ3000_odzoiovu"
+          "_TZ3000_odzoiovu",
+          "_TZ3000_lvhy15ix"
         ],
         "productId": [
           "TS0003"
@@ -3695,6 +3727,8 @@
           "_TZ3000_bguser20",
           "_TZ3000_8ybe88nf",
           "_TZ3000_fie1dpkm",
+          "TUYATEC-riuj5xzs",
+          "TUYATEC-1uxx9cci"
           "TUYATEC-riuj5xzs",
           "TUYATEC-1uxx9cci"
         ],
@@ -3993,6 +4027,8 @@
           "_TZ3000_fllyghyj",
           "_TZ3000_xr3htd96",
           "_TZ3000_saiqcn0y"
+          "_TZ3000_xr3htd96",
+          "_TZ3000_saiqcn0y"
         ],
         "productId": [
           "TS0201"
@@ -4258,6 +4294,24 @@
         "nl": "sec"
       }
     },
+    "away_mode": {
+      "type": "boolean",
+      "title": {
+        "en": "Away Mode"
+      },
+      "uiComponent": "toggle",
+      "getable": true,
+      "setable": true
+    },
+    "child_lock": {
+      "type": "boolean",
+      "title": {
+        "en": "Child Lock"
+      },
+      "uiComponent": "toggle",
+      "getable": true,
+      "setable": true
+    },
     "lidl_xmas_mode": {
       "title": {
         "en": "Mode"
@@ -4446,25 +4500,51 @@
       "setable": true,
       "capabilitiesOptions": {}
     },
-    "valve_state_auto_shutdown": {
-      "type": "number",
+    "thermostat_preset": {
+      "type": "enum",
       "title": {
-        "en": "Valve State @ autoshutdown",
-        "nl": "Kraanstatus @ auto stop"
+        "en": "Thermostat mode"
+      },
+      "desc": {
+        "en": "Mode of the thermostat"
+      },
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "en": "Automatic"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "Manual"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "Holiday"
+          }
+        }
+      ],
+      "getable": true,
+      "setable": true,
+      "uiComponent": "picker"
+    },
+    "window_open": {
+      "type": "boolean",
+      "title": {
+        "en": "Window open"
+      },
+      "desc": {
+        "en": "Window open"
       },
       "units": {
-        "en": "%",
-        "nl": "%"
+        "en": "Status"
       },
-      "icon": "/drivers/smart_water_timer/assets/images/nighttime.svg",
       "getable": true,
-      "setable": false,
-      "chartType": "area",
-      "uiComponent": "sensor",
-      "min": 0,
-      "max": 100,
-      "steps": 5,
-      "decimals": 0
+      "setable": true
     }
   }
 }

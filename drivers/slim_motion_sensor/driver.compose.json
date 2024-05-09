@@ -22,7 +22,21 @@
   },
   "zigbee": {
     "manufacturerName": [
+<<<<<<<< HEAD:drivers/slim_motion_sensor/driver.compose.json
       "_TZ3000_lf56vpxj"
+========
+      "_TYZB01_sqmd19i1",
+      "_TYST11_qq9mpfhw",
+      "_TZ3000_fxvjhdyl",
+      "_TZ3000_eit7p838",
+      "_TZ3000_t6jriawg",
+      "_TZ3000_85czd6fy",
+      "_TZ3000_kyb656no",
+      "_TZ3000_0s9gukzt",
+      "_TZ3000_kstbkt6a",
+      "_TZ3000_mugyhz0q",
+      "_TZ3000_upgcbody"
+>>>>>>>> f2cd0f3 (Merge remote-tracking branch 'upstream/SDK3' into SDK3):drivers/water_detector/driver.compose.json
     ],
     "productId": [
       "TS0202"

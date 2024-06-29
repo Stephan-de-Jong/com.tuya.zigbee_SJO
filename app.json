@@ -1,6 +1,6 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
-  "id": "com.tuya.zigbee",
+  "id": "com.tuya.zigbee_SJO_test",
   "version": "0.2.26",
   "compatibility": ">=5.0.0",
   "platforms": [
@@ -8,7 +8,7 @@
   ],
   "sdk": 3,
   "name": {
-    "en": "Tuya Zigbee"
+    "en": "Tuya Zigbee_SJO_test"
   },
   "description": {
     "en": "Control your white label Zigbee devices made by Tuya"
@@ -3266,56 +3266,56 @@
       ]
     },
     {
-        "id": "outdoor_plug",
-        "name": {
-            "en": "Outdoor Plug without metering"
-        },
-        "class": "socket",
-        "platforms": [
-            "local"
+      "id": "outdoor_plug",
+      "name": {
+        "en": "Outdoor Plug without metering"
+      },
+      "class": "socket",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "capabilities": [
+        "onoff"
+      ],
+      "capabilitiesOptions": {
+        "measure_power": {
+          "approximated": true
+        }
+      },
+      "images": {
+        "large": "/drivers/outdoor_plug/assets/images/large.png",
+        "small": "/drivers/outdoor_plug/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "_TZ3000_pnzfdr9y"
         ],
-        "connectivity": [
-            "zigbee"
+        "productId": [
+          "TS0101"
         ],
-        "capabilities": [
-            "onoff"
-        ],
-        "capabilitiesOptions": {
-            "measure_power": {
-                "approximated": true
-            }
-        },
-        "images": {
-            "large": "/drivers/outdoor_plug/assets/images/large.png",
-            "small": "/drivers/outdoor_plug/assets/images/small.png"
-        },
-        "zigbee": {
-            "manufacturerName": [
-                "_TZ3000_pnzfdr9y"
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              4,
+              5,
+              6
             ],
-            "productId": [
-                "TS0101"
-            ],
-            "endpoints": {
-                "1": {
-                    "clusters": [
-                        0,
-                        4,
-                        5,
-                        6
-                    ],
-                    "bindings": [
-                        6
-                    ]
-                }
-            },
-            "learnmode": {
-                "instruction": {
-                    "en": "Press and hold down on/off switch for aprox 5 seconds until the LED blinks rapidly."
-                }
-            }
+            "bindings": [
+              6
+            ]
+          }
         },
-        "settings": []
+        "learnmode": {
+          "instruction": {
+            "en": "Press and hold down on/off switch for aprox 5 seconds until the LED blinks rapidly."
+          }
+        }
+      },
+      "settings": []
     },
     {
       "id": "pir_motion_illuminance_sensor",
@@ -8481,6 +8481,7 @@
           "_TZ3000_oex7egmt",
           "_TZ3000_hafsqare",
           "_TZ3000_oaq83gqc",
+          "_TZ3000_hhiodade",
           "_TZ3000_6eyydfyg"
         ],
         "productId": [
@@ -8491,6 +8492,9 @@
           "1": {
             "clusters": [
               0,
+              3,
+              4,
+              5,
               6
             ],
             "bindings": [
@@ -8501,11 +8505,40 @@
         "learnmode": {
           "image": "/drivers/wall_switch_1_gang/assets/icon.svg",
           "instruction": {
-            "en": "Press the button for 10 seconds (the LED should start blinking)."
+            "en": "Press the button for 7 seconds (until LED starts blinking)."
           }
         }
       },
-      "settings": []
+      "settings": [
+        {
+          "id": "indicator_mode",
+          "type": "radio",
+          "label": {
+            "en": "Indicator mode"
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Light Off"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Light on when switch turned on."
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Light on when the switch is turned off."
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "wall_switch_1_gang_tuya",

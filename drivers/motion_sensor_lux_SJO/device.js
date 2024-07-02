@@ -5,7 +5,7 @@ const { getDataValue, dataPoints } = require('./utils');
 
 Cluster.addCluster(TuyaSpecificCluster);
 
-class motion_sensor_2 extends TuyaSpecificClusterDevice {
+class motion_sensor_lux_SJO extends TuyaSpecificClusterDevice {
 
     async onNodeInit({ zclNode }) {
 
@@ -142,4 +142,4 @@ class motion_sensor_2 extends TuyaSpecificClusterDevice {
 
 }
 
-module.exports = motion_sensor_2;
+module.exports = motion_sensor_lux_SJO;

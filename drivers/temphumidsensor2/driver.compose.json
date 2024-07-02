@@ -25,12 +25,12 @@
     "manufacturerName": [
       "_TZ3000_dowj6gyi",
       "_TZ3000_0s1izerx",
-      "TZE200_a8sdabtg" //added, romove if not working
+      "TZE200_a8sdabtg"
     ],
     "productId": [
       "RH3052",
       "TS0201",
-      "TS0601" //added, romove if not working
+      "TS0601"
     ],
     "endpoints": {
       "1": {

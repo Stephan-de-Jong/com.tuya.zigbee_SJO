@@ -1,5 +1,5 @@
 {
-  "id": "com.tuya.zigbee",
+  "id": "com.tuya.zigbee_SJO",
   "version": "0.2.26",
   "compatibility": ">=5.0.0",
   "platforms": [
@@ -7,7 +7,7 @@
   ],
   "sdk": 3,
   "name": {
-    "en": "Tuya Zigbee"
+    "en": "Tuya Zigbee_SJO_test"
   },
   "description": {
     "en": "Control your white label Zigbee devices made by Tuya"

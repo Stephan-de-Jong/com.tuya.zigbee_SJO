@@ -21,7 +21,12 @@
     },
     "zigbee": {
       "manufacturerName": [
+<<<<<<<< HEAD:drivers/wall_switch_1_gang_tuya/driver.compose.json
         "_TZE200_gbagoilo"
+========
+        "_TZE200_ntcy3xu1",
+        "_TZE200_m9skfctm"
+>>>>>>>> f2cd0f3 (Merge remote-tracking branch 'upstream/SDK3' into SDK3):drivers/smoke_sensor2/driver.compose.json
       ],
       "productId": [
         "TS0601"

@@ -1,0 +1,45 @@
+{
+  "id": "mini_zigbee_switch_SJO",
+  "name": {
+    "en": "mini_zigbee_switch_SJO"
+  },
+  "class": "socket",
+  "platforms": ["local"],
+  "connectivity": ["zigbee"],
+  "capabilities": [
+    "onoff",
+    "measure_power",
+    "meter_power",
+    "measure_current",
+    "measure_voltage"
+  ],
+  "capabilitiesOptions": {
+    "measure_power": {
+      "approximated": true
+    }
+  },
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zigbee": {
+    "manufacturerName": [
+      "_TZ3000_gjrubzje",
+      "_TZ3000_zw7yf6yk"
+    ],
+    "productId": [
+      "TS0001"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [0, 3, 4, 5, 6, 1794, 2820],
+        "bindings": [6, 1794, 2820]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Press and hold down on/off switch for aprox 10 seconds until the LED blinks rapidly."
+      }
+    }
+  }
+}

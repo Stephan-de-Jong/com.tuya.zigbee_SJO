@@ -23,10 +23,12 @@
 	},
 	"zigbee": {
 		"manufacturerName": [
-			"_TZE200_3towulqd"
+			"_TZE200_3towulqd",
+			"HOBEIAN"
 		],
 		"productId": [
-			"TS0601"
+			"TS0601",
+			"ZG-204ZL"
 		],
 		"endpoints": {
 			"1": {
